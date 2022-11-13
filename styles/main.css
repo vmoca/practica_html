@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+/* navbar */
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fcfcfc;
+}
+
+.navbar .logo {
+   max-width: 170px; 
+}
+
+.nav-links-container{
+    visibility: hidden;
+    display: none;
+}
+
+.links {
+    text-decoration: none;
+    color: #000;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.nav-link {
+    opacity: 0.6;
+    transition: .5s;
+}
+
+.nav-link.active, .nav-link:hover{
+    opacity: 1;
+}
+
+/* header */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+.portfolio_img {
+    background: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url(../img/mando_profile.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    padding: 0 25px;
+}
+
+/* main content */
+.main-content {
+    padding: 5vh 5vw;
+    color: #292929;
+    font-size: 1rem;
+    line-height: 22px;
+}
+
+/* skills section */
+.skills-container {
+    position: relative;
+    width: 100%;
+    padding: 5vh 5vh;
+    
+}
+
+.skills-space {
+    padding: 5vh 5vw;
+    margin: 2vw;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+.skills-container .skill-box{
+    width: 100%;
+    margin: 25px 0;
+}
+
+.skill-box .title{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+.skill-box .skill-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #f6a900;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+.skill-per.javascript{
+    width: 50%;
+    animation-delay: 0.2s;
+}
+.skill-per.nodejs{
+    width: 30%;
+    animation-delay: 0.3s;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #db8a04;
+    z-index: 1;
+}
+.tooltip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #db8a04;
+    transform: translateX(-50%) rotate(45deg);
+
+}
+
+/* conatct form */
+.contact-container {
+    padding: 5vh 5vw;
+    color: #292929;
+    font-size: 1rem;
+    line-height: 22px;
+}
+
+form {
+    max-width: 90vw;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+input[type="submit"] {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #f6a900;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #db8a04;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+/* Footer social media */
+footer {
+    margin: 30px 0;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    display: flex;
+    background: #fff;
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0,124,196,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0, 124, 196, 0);
+    transition: transform 0.5s
+}
+
+.social-media a i {
+    font-size: 20px;
+    color: #777;
+    transition: transform 0.5s;
+}
+
+.social-media a:hover {
+    box-shadow:inset 4px 4px 6px -2px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                      -0.5px -0.5px 0px -1px rgba(255,255,255,1),
+                      0.5px 0.5px 0px rgba(0,0,0,0.15),
+                      0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 124, 196, 0.1);
+    transform: translateY(2px);
+}
+
+.social-media a:hover i {
+    transform: scale(0.90);
+}
+
+.social-media a:hover .fa-facebook {
+    color: #3b5998;
+}
+
+.social-media a:hover .fa-twitter {
+    color: #00acee;
+}
+
+.social-media a:hover .fa-whatsapp {
+    color: #4fce5d;
+}
+
+.social-media a:hover .fa-instagram {
+    color: #f14843;
+}
+
+.social-media a:hover .fa-youtube {
+    color: #f00;
+}
+
+/* 0px            450px            1200px */
+/*  ---------------------------------->  */
+@media screen and (min-width: 579px) {
+    .nav-links-container{
+        display: flex;
+        list-style: none;
+        visibility: visible;
+    }
+}

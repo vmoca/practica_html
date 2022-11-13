@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mandalorian - Portfolio</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+</head>
+<body>
+    <!-- navigation -->
+    <nav class="navbar">
+        <img class="logo" src="img/logo_mandalorian.png" alt="The Mandalorian">
+        <ul class="nav-links-container">
+            <li class="nav-link">
+                <a class="links active" href="#about-me">About me</a>
+            </li>
+            <li class="nav-link">
+                <a class="links" href="#skills">Skills</a>
+            </li>
+            <li class="nav-link">
+                <a class="links" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- header tag -->
+    <header>
+        <hgroup class="portfolio_img flex-container">
+            <h1>The Mandalorian Portfolio</h1>
+        </hgroup>
+    </header>
+    <!-- about me section -->
+    <main class="main-content" id="about-me">
+        <section>
+            <article>
+                <h2>The Mandalorian</h2>
+                <p>Hi! I am The Mandalorian and I have been looking for others of my kind to help me find the child's home. I went to the planet Tatooine where I found the armor of a fallen Mandalorian. I heard rumors that in the moon of Trask there were other Mandalorians which redirected me to a Jedi. This Jedi explained me how to find out the child´s destiny but the evil Moff Gideon kidnapped the child and I must get him back.</p>
+            </article>
+        </section>
+    </main>
+    <!-- skills section -->
+    <section class="skills-container" id="skills">
+        <h2>My skills</h2>
+        <div class="skills-space">
+            <div class="skill-box">
+                <span class="title">HTML</span>
+                <div class="skill-bar">
+                    <span class="skill-per html">
+                        <span class="tooltip">90%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">CSS</span>
+
+                <div class="skill-bar">
+                    <span class="skill-per css">
+                        <span class="tooltip">70%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">JavaScript</span>
+
+                <div class="skill-bar">
+                    <span class="skill-per javascript">
+                        <span class="tooltip">50%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">NodeJS</span>
+
+                <div class="skill-bar">
+                    <span class="skill-per nodejs">
+                        <span class="tooltip">30%</span>
+                    </span>
+                </div>
+            </div>
+            </div>
+        
+    </section>
+    <!-- contact section -->
+    <section class="contact-container" id="contact">
+        <h2>Contact with me</h2>
+        <form action="registration-completed.html" method="post">
+                <div>
+                    <label for="name">Name</label>
+                    <input required id="name" name="name" type="text" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="surname">Surnames</label>
+                    <input required id="surname" name="surname" type="text" placeholder="Enter your surnames">
+                </div>
+                <div>
+                    <label for="phone">Phone</label>
+                    <input required type="tel" id="phone" name="phone" pattern="[0-9]+" placeholder="Phone number">
+                </div>
+                <div>
+                    <label for="github">Github username</label>
+                    <input type="text" id="github" name="github" pattern="^@[^\s]+" placeholder="With this format (@<username>)">
+                </div>
+                <fieldset>
+                    <legend>How did you meet me?</legend>
+
+                    <div>
+                        <input required id="university" type="radio" name="meetMe" value="university">
+                        <label for="university" class="light">University</label>
+                    </div>
+                    
+                    <div>
+                        <input required id="keepcoding" type="radio" name="meetMe" value="keepcoding">
+                        <label for="keepcoding" class="light">Keepcoding kick-off</label>
+                    </div>
+                    
+                    <div>
+                        <input required id="school" type="radio" name="meetMe" value="school">
+                        <label for="school" class="light">School</label>
+                    </div>
+
+                    <div>
+                        <input required id="github" type="radio" name="meetMe" value="github">
+                        <label for="github" class="light">GitHub</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="info">More info</label>
+                    <textarea required name="info" id="info" minlength="2" maxlength="180" placeholder="What more do you want to know"></textarea>
+                </div>
+                <input type="submit" value="Submit">
+        </form>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+    </footer>
+</body>
+</html>
